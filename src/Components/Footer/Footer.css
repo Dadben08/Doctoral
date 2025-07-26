@@ -1,0 +1,36 @@
+.footer {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid #797979;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  color: #797979;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  color: #797979;
+  flex-wrap: wrap;
+}
+
+/* ===== Responsive Footer for Small Screens ===== */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer ul {
+    justify-content: center;
+    padding: 0;
+  }
+}

@@ -1,0 +1,150 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn {
+  background-color: #ffffff44;
+  color: #fff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo container */
+.log {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.log p {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Menu Icon for hamburger (shown only on mobile) */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 25;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.7rem;
+}
+
+nav ul li {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+  background: #ffffff83;
+  color: #333;
+  transform: scale(1.1);
+}
+
+.dark-nav {
+  background: #212ea0;
+  transition: all 0.5s ease-in-out;
+}
+
+/* ===== Login Visibility Based on Screen ===== */
+.login-btn-desktop {
+  display: block;
+}
+
+.login-btn-mobile {
+  display: none;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1000px) {
+  .log {
+    width: 140px;
+  }
+
+  nav ul li {
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -220px;
+    bottom: 0;
+    background: #212ea0;
+    width: 200px;
+    padding-top: 70px;
+    flex-direction: column;
+    transition: right 0.5s ease-in-out;
+    z-index: 20;
+  }
+
+  nav ul.open-menu {
+    right: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px 40px;
+  }
+
+  .btn {
+    width: 80%;
+    margin: 1rem auto 0 auto;
+    display: block;
+  }
+
+  .login-btn-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .login-btn-desktop {
+    display: none;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Programs.css'
-import program from '../../assets/program_1.jpg'
+import program from '../../assets/Program_1.jpg'
 import program2 from '../../assets/program_2.jpg'
 import program3 from '../../assets/program_3.jpg'
 const Programs = () => {
